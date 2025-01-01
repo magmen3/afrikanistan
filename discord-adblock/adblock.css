@@ -1,89 +1,93 @@
 /* ==UserStyle==
 @name           Discord AdBlock AFRIKANISTAN EDITION
 @namespace      https://github.com/CroissantDuNord/discord-adblock / https://github.com/magmen3/afrikanistan
-@version        1.0.0
+@version        1.0.1
 @description    Removes annoying Nitro upsells from Discord.
 @author         CroissantDuNord & contributors
 ==/UserStyle== */
 
 /* Fullscreen Nitro trial ad */
 div[class^=layerContainer_]:has(div[class*="freeTrialPillWithSparkles_"]) {
-  display: none;
+	display: none;
 }
 
 /* Stream Quality Upsell */
 div[class*=upsellBanner] {
-    display: none !important;
+	display: none !important;
 }
 
 /* Hides Premium Buttons In Quality Settings */
 div[class*="qualitySettingsContainer"] button[class*=selectorButtonPremiumRequired] {
-    display: none !important;
+	display: none !important;
 }
 
 /* Hides Quality Selector If Nitro Button Upsell Present Due To There Only Being A Single Resolution Left! */
 div[class*="qualitySettingsContainer"] div[class*="settingsGroup"]:first-child:has(button[class*=selectorButtonPremiumRequired]) {
-    display: none !important;
+	display: none !important;
 }
 
 /* Makes The Fps Selector Smaller */
 div[class*="qualitySettingsContainer"] div[class*="settingsGroup"]:last-child:has(button[class*=selectorButtonPremiumRequired]) div[class*="group"] {
-    width: 106.84px;
+	width: 106.84px;
 }
 
 /* Restores Border Radius To New Last Button */
 div[class*="qualitySettingsContainer"] div[class*="settingsGroup"]:last-child:has(button[class*=selectorButtonPremiumRequired]) div[class*="group"] button:nth-last-child(2) {
-    border-radius: 0 3px 3px 0;
+	border-radius: 0 3px 3px 0;
 }
 
 /* Chat view blocks */
 /* App launcher icons (chat box, guild menu, AI apps on image hover) */
 div[class^=channelAppLauncher_] {
-  display: none;
+	display: none;
 }
+
 div[class^="jumpToPresentBar_"] {
-  right: 16px;
+	right: 16px;
 }
+
 div[id="guild-header-popout-application-directory"] {
-  display: none;
+	display: none;
 }
+
 div[class^=hoverButton_]:has(g[transform="matrix(2.700000047683716,0,0,2.700000047683716,-79.60000610351562,-81.35110473632812)"]) {
-  display: none;
+	display: none;
 }
 
 /* Store tab */
 li[class^=channel_]:has(a[href="/shop"]) {
-    display: none;
+	display: none;
 }
 
 /* Nitro tab */
 li[class^=channel_]:has(a[href="/store"]) {
-    display: none;
+	display: none;
 }
 
 /* Store popup ads */
 [id^=popout]:has([class^=buttonContainerVertical]) {
-    display:none;
+	display: none;
 }
 
 /* Gift button */
-div[class^=buttons_] > button[aria-haspopup="dialog"]:has(path[d="M0,0 L600,0 L600,600 L0,600z"]) {
-  display: none;
+div[class^=container_]>button:has(path[d="M4 6a4 4 0 0 1 4-4h.09c1.8 0 3.39 1.18 3.91 2.9A4.09 4.09 0 0 1 15.91 2H16a4 4 0 0 1 3.46 6H20a2 2 0 0 1 2 2v1.5a.5.5 0 0 1-.5.5h-19a.5.5 0 0 1-.5-.5V10c0-1.1.9-2 2-2h.54A3.98 3.98 0 0 1 4 6Zm12 2a2 2 0 1 0 0-4h-.09c-.96 0-1.8.65-2.02 1.58L13.29 8H16Zm-5.89-2.42.6 2.42H8a2 2 0 1 1 0-4h.09c.96 0 1.8.65 2.02 1.58Z"], path[d="M3 20c0 1.1.9 2 2 2h5.5a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.5-.5h-7a.5.5 0 0 0-.5.5V20ZM13.5 22a.5.5 0 0 1-.5-.5v-7c0-.28.22-.5.5-.5h7c.28 0 .5.22.5.5V20a2 2 0 0 1-2 2h-5.5Z"]) {
+	display: none;
 }
 
 /* Super reactions -- Doesn't seem like these are being pushed on free users anymore. */
 /* Leaving them as is, but raise an issue if they break normal reactions. */
 #message-add-reaction-1 {
-    display: none;
+	display: none;
 }
+
 #message-actions-add-reaction-1 {
-    display: none;
+	display: none;
 }
 
 /* Settings blocking */
 /* Banner ad */
-#profile-customization-tab > div:has(div[class*="artContainer"][role="presentation"]) {
-    display: none;
+#profile-customization-tab>div:has(div[class*="artContainer"][role="presentation"]) {
+	display: none;
 }
 
 /* Avatar decoration settings */
@@ -97,28 +101,28 @@ div[class^=buttons_] > button[aria-haspopup="dialog"]:has(path[d="M0,0 L600,0 L6
 }*/
 
 /* "Try Nitro!" ad */
-#profile-customization-tab > [class*=premiumFeatureBorder_] {
-    display: none;
+#profile-customization-tab>[class*=premiumFeatureBorder_] {
+	display: none;
 }
 
 /* Server profiles upsell */
-#profile-customization-tab > div > div[class*=profileCustomizationSection_] > div[class*=baseLayout_] > div[class*=sectionsContainer_] > div[class*=upsellOverlayContainer_] {
-    display: none;
+#profile-customization-tab>div>div[class*=profileCustomizationSection_]>div[class*=baseLayout_]>div[class*=sectionsContainer_]>div[class*=upsellOverlayContainer_] {
+	display: none;
 }
 
 /* App colour */
-#appearance-tab > div > div > div > div > div[role=radiogroup] > section:not(section[class*=basicThemeSelectors_]) {
-    display: none;
+#appearance-tab>div>div>div>div>div[role=radiogroup]>section:not(section[class*=basicThemeSelectors_]) {
+	display: none;
 }
 
 /* Icon Theme (just edit the .ico file) */
-#appearance-tab > div > div > div > div[class*=selectionGroup_]:has([class*=appIconSelectionContainer_]) {
-    display: none;
+#appearance-tab>div>div>div>div[class*=selectionGroup_]:has([class*=appIconSelectionContainer_]) {
+	display: none;
 }
 
 /* BOGO button in settings */
-div[class^=premiumLabel_] > div[class^=badgeContainer_]:has(span[class*="star_"]) {
-  display: none;
+div[class^=premiumLabel_]>div[class^=badgeContainer_]:has(span[class*="star_"]) {
+	display: none;
 }
 
 /* Billing info sidebar --- I've decided it's better to just leave this, it's not too intrusive.
@@ -150,41 +154,52 @@ If anyone knows a better way to block precisely the billing info settings, pleas
 
 /* Guilds blocking */
 /* Server boost button */
-#guild-header-popout > div > div:nth-child(1), #guild-header-popout > div > div:nth-child(2) {
-    display: none;
+#guild-header-popout>div>div:nth-child(1),
+#guild-header-popout>div>div:nth-child(2) {
+	display: none;
 }
 
 /* Shop AD Profile */
 html.full-motion.show-redesigned-icons.theme-dark.platform-web.font-size-16 body div#app-mount.appMount_fae9dd div.appAsidePanelWrapper__714a6 div.notAppAsidePanel__9d124 div.app_b1f720 div.app_de4237 div.layers__1c917.layers_a23c37 div.layer__2efaa div.standardSidebarView__1129a div.contentRegion__0bec1 div.contentTransitionWrap_c5bc61 div.contentRegionScroller__86c79.contentRegionShownSidebar__610ed.auto_a48086.scrollerBase_dc3aa9 div:nth-child(3) {
-    display: none;
+	display: none;
 }
 
 /* Custom Join Sound AD (No discord I dont want to play a random meme sound when I join a call)*/
-#popout_4611 > div > div > div.gridNoticeWrapper__548b9 > div {
-    display: none;
+#popout_4611>div>div>div.gridNoticeWrapper__548b9>div {
+	display: none;
 }
 
 /* Profile Effect (Shop) */
-#profile-customization-tab > div:nth-child(4) > div > div > div.sectionsContainer_a37883 > div:nth-child(5) {
-    display: none;
+#profile-customization-tab>div:nth-child(4)>div>div>div.sectionsContainer_a37883>div:nth-child(5) {
+	display: none;
 }
 
 /* Hide upsell banner for messages that are too long */
-div[class*=characterCount] > div[class*=upsell_] {
-    display: none;
+div[class*=characterCount]>div[class*=upsell_] {
+	display: none;
 }
 
 /* Hide message length Nitro "subscribe" button */
-div[role=dialog] > div > div > div[class*=primaryActions_] > button:has(svg[class*=premiumIcon]) {
-  display: none;
+div[role=dialog]>div>div>div[class*=primaryActions_]>button:has(svg[class*=premiumIcon]) {
+	display: none;
 }
 
 /* Desktop app ad */
-[class^=notice_]:has(i[class^=iconApple]){
-    display:none;
+[class^=notice_]:has(i[class^=iconApple]) {
+	display: none;
 }
 
 /* You have X days left to try Nitro banner */
-div[class^=base_] > div[class^=notice_]:has([class^=premiumIcon_]) {
-    display: none;
+div[class^=base_]>div[class^=notice_]:has([class^=premiumIcon_]) {
+	display: none;
+}
+
+/* Profile popup upsell */
+div[class^="inner_"]>div[class^="body_"]>div[class^="upsellContainer_"] {
+	display: none;
+}
+
+/* Try nitro and get avatar decorations banner */
+div[class^=notice_][class*=colorPremium_] {
+	display: none;
 }
